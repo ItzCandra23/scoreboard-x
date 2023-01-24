@@ -1,5 +1,8 @@
 # Scoreboard-X
+
 This is a scoreboard plugin for [BDSX](https://github.com/bdsx/bdsx). You can add or create addons for your scoreboard and you can customize your own scoreboard.
+
+![Preview](./resources/mini_preview.png)
 
 # Setup
 ## How to customize the scoreboard
@@ -7,6 +10,7 @@ This is a scoreboard plugin for [BDSX](https://github.com/bdsx/bdsx). You can ad
 - Find the scoreboard-x plugin folder and open.
 - Open `config.json` in scoreboard-x plugin.
 - Customize the scoreboard you want.
+
 ## How to create your addon
 - Go to scoreboard-x plugin folder.
 - Go to addons folder.
@@ -23,3 +27,11 @@ export function getProcessedTags(player: ServerPlayer): AddonData[] {
 }
 ```
 - And you can edit your scoreboard addon.
+
+# Other
+If you have ideas for future updates or you find bugs in this plugin you can report [here](https://github.com/ItzCandra23/scoreboard-x/issues/new).
+
+## Author
+- [Github](https://github.com/ItzCandra23)
+- [OmletArcade](https://omlet.gg/profile/candra_gaming123)
+- [Youtube](https://www.youtube.com/@itzcandra23)
