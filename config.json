@@ -1,0 +1,44 @@
+{
+  "scoreboard": {
+    "titles": [
+      "&a&lScoreboardX",
+      "&d&lScoreboardX",
+      "&6&lScoreboardX",
+      "&b&lScoreboardX"
+    ],
+    "lines": [
+      [
+        "                           ",
+        0
+      ],
+      [
+        "  Name: &a{name}",
+        1
+      ],
+      [
+        "  Item: &a{item_custom_name}",
+        2
+      ],
+      [
+        "  Count: &a{item_count}",
+        3
+      ],
+      [
+        "  Ping: &a{ping}",
+        4
+      ],
+      [
+        "  Online: &a{online}/{max_online}",
+        5
+      ],
+      [
+        "  Pos: &a{x}, {y}, {z}",
+        6
+      ],
+      [
+        "                          ",
+        7
+      ]
+    ]
+  }
+}

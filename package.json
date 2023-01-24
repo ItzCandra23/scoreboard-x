@@ -1,0 +1,13 @@
+{
+    "name": "@bdsx/scoreboard-x",
+    "description": "This is a scoreboard plugin for BDSX",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "ISC",
+    "keywords": [ "Scoreboard-X", "BDSX" ],
+    "author": "ItzCandra23",
+    "bdsxPlugin": true,
+    "devDependencies": {
+      "bdsx": "file:../bdsx"
+    }
+}
