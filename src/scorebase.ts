@@ -16,10 +16,10 @@ let config: {
 } = {
     scoreboard: {
         titles: [
-            "&k&lii&r&a&lScoreboardX&r&k&lii&r",
-            "&k&lii&r&d&lScoreboardX&r&k&lii&r",
-            "&k&lii&r&6&lScoreboardX&r&k&lii&r",
-            "&k&lii&r&b&lScoreboardX&r&k&lii&r",
+            "&k&lii&r&a&lScoreboardX&f&k&lii&r",
+            "&k&lii&r&d&lScoreboardX&f&k&lii&r",
+            "&k&lii&r&6&lScoreboardX&f&k&lii&r",
+            "&k&lii&r&b&lScoreboardX&f&k&lii&r",
         ],
         lines: [
             ["                           ", 0],
