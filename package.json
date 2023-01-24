@@ -4,7 +4,7 @@
     "version": "1.0.0",
     "main": "index.js",
     "license": "ISC",
-    "keywords": [ "Scoreboard-X", "BDSX" ],
+    "keywords": [ "scoreboard-x", "BDSX" ],
     "author": "ItzCandra23",
     "bdsxPlugin": true,
     "devDependencies": {
