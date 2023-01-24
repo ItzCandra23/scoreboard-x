@@ -2,7 +2,7 @@
 
 This is a scoreboard plugin for [BDSX](https://github.com/bdsx/bdsx). You can add or create addons for your scoreboard and you can customize your own scoreboard.
 
-![Preview](./resources/mini_preview.png)
+![Preview](https://github.com/ItzCandra23/scoreboard-x/blob/main/resources/mini_preview.png)
 
 # Setup
 ## How to customize the scoreboard
