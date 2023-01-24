@@ -6,6 +6,7 @@
     "license": "ISC",
     "keywords": [ "scoreboard-x", "BDSX" ],
     "author": "ItzCandra23",
+    "homepage: "https://github.com/ItzCandra23/scoreboard-x",
     "bdsxPlugin": true,
     "devDependencies": {
       "bdsx": "file:../bdsx"
