@@ -1,6 +1,6 @@
 # Scoreboard-X
 
-This is a scoreboard plugin for [BDSX](https://github.com/bdsx/bdsx). You can add or create addons for your scoreboard and you can customize your own scoreboard.
+This is a scoreboard plugin like [scorehud](https://poggit.pmmp.io/p/ScoreHud) in [PMMP](https://github.com/pmmp/PocketMine-MP) but this plugin is for [BDSX](https://github.com/bdsx/bdsx). You can customize the scoreboard as you like and you can add addons in this plugin for your scoreboard.
 
 ![Preview](https://github.com/ItzCandra23/scoreboard-x/blob/main/resources/mini_preview.png)
 
