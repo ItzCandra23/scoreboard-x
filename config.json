@@ -1,11 +1,13 @@
 {
   "scoreboard": {
+    //You can edit scoreboard title in here.
     "titles": [
       "&k&lii&r&a&lScoreboardX&f&k&lii&r",
       "&k&lii&r&d&lScoreboardX&f&k&lii&r",
       "&k&lii&r&6&lScoreboardX&f&k&lii&r",
       "&k&lii&r&b&lScoreboardX&f&k&lii&r"
     ],
+    //And you can edite or add scoreboard line in here.
     "lines": [
       [
         "                           ",
