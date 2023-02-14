@@ -25,6 +25,7 @@ export function getProcessedTags(player: ServerPlayer): AddonData[] {
         ["&m", "§m"],
         ["&n", "§n"],
         ["&o", "§o"],
+        ["&k", "§k"],
         ["&r", "§r"],
     ];
 }
