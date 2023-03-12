@@ -6,8 +6,8 @@ import { AddonData } from "../src/addon";
 
 export function getProcessedTags(player: ServerPlayer): AddonData[] {
     return [
-        ["{name}", player.getNameTag()],
-        ["{real_name}", player.getNameTag()],
+        ["{name}", player.getName()],
+        ["{real_name}", player.getName()],
         ["{display_name}", player.getNameTag()],
         ["{gamemode}", GameType[player.getGameType()]],
         ["{platform}", BuildPlatform[player.getPlatform()]],
