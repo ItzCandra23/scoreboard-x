@@ -7,8 +7,8 @@ const common_1 = require("bdsx/common");
 const launcher_1 = require("bdsx/launcher");
 function getProcessedTags(player) {
     return [
-        ["{name}", player.getNameTag()],
-        ["{real_name}", player.getNameTag()],
+        ["{name}", player.getName()],
+        ["{real_name}", player.getName()],
         ["{display_name}", player.getNameTag()],
         ["{gamemode}", player_1.GameType[player.getGameType()]],
         ["{platform}", common_1.BuildPlatform[player.getPlatform()]],
