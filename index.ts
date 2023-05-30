@@ -10,7 +10,7 @@ const intrval = setInterval(() => {
     for (const [netId, player] of players.entries()) {
         ScoreboardX.sendTo(player);
     }
-}, 1000);
+}, ScoreboardX.getSpeed());
 
 events.playerJoin.on((ev) => {
     players.set(ev.player.getNetworkIdentifier(), ev.player);
@@ -27,7 +27,4 @@ events.serverOpen.on(() => {
     send.success("Started!");
 });
 
-events.serverClose.on(() => {
-    clearInterval(intrval);
-    ScoreboardX.save();
-});
+events.serverStop.on(() => clearInterval(intrval));

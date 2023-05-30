@@ -4,6 +4,11 @@ This is a scoreboard plugin like [ScoreHud](https://poggit.pmmp.io/p/ScoreHud) i
 
 ![Preview](https://github.com/ItzCandra23/scoreboard-x/blob/main/resources/mini_preview.png)
 
+# Commands
+
+- /scorex < hide|show > - Show ot hide scoreboard.
+- /sbx < hide|show > - Show ot hide scoreboard.
+
 # Setup
 ## How to customize the scoreboard
 - Go to the folder where your plugins is located.
@@ -28,10 +33,14 @@ export function getProcessedTags(player: ServerPlayer): AddonData[] {
 ```
 - And you can edit your scoreboard addon.
 
-# Other
-If you have ideas for future updates or you find bugs in this plugin you can report [here](https://github.com/ItzCandra23/scoreboard-x/issues/new).
-
-## Author
+# Author
 - [Github](https://github.com/ItzCandra23)
 - [OmletArcade](https://omlet.gg/profile/candra_gaming123)
 - [Youtube](https://www.youtube.com/@itzcandra23)
+
+# Other
+If you have ideas for future updates or you find bugs in this plugin you can report [here](https://github.com/ItzCandra23/scoreboard-x/issues/new).
+
+- [NPM](https://www.npmjs.com/package/@bdsx/scoreboard-x)
+- [Github](https://github.com/ItzCandra23/scoreboard-x)
+- [Download](https://github.com/ItzCandra23/scoreboard-x/archive/refs/heads/main.zip)

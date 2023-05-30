@@ -1,44 +1,21 @@
 {
-  "scoreboard": {
-    "titles": [
-      "&k&lii&r&a&lScoreboardX&f&k&lii&r",
-      "&k&lii&r&d&lScoreboardX&f&k&lii&r",
-      "&k&lii&r&6&lScoreboardX&f&k&lii&r",
-      "&k&lii&r&b&lScoreboardX&f&k&lii&r"
-    ],
-    "lines": [
-      [
-        "                           ",
-        0
-      ],
-      [
-        "  Name: &a{name}",
-        1
-      ],
-      [
-        "  Item: &a{item_custom_name}",
-        2
-      ],
-      [
-        "  Count: &a{item_count}",
-        3
-      ],
-      [
-        "  Ping: &a{ping}",
-        4
-      ],
-      [
-        "  Online: &a{online}/{max_online}",
-        5
-      ],
-      [
-        "  Pos: &a{x}, {y}, {z}",
-        6
-      ],
-      [
-        "                          ",
-        7
-      ]
-    ]
-  }
+    "speed": 1000,
+    "scoreboard": {
+        "titles": [
+            "&k&lii&r&a&lScoreboardX&f&k&lii&r",
+            "&k&lii&r&d&lScoreboardX&f&k&lii&r",
+            "&k&lii&r&6&lScoreboardX&f&k&lii&r",
+            "&k&lii&r&b&lScoreboardX&f&k&lii&r"
+        ],
+        "lines": [
+            ["===============&r", 0],
+            ["&a‣ &rName: &a{name}", 1],
+            ["&a‣ &rItem: &a{item_custom_name}", 2],
+            ["&a‣ &rCount: &a{item_count}", 3],
+            ["&a‣ &rPing: &a{ping}", 4],
+            ["&a‣ &rOnline: &a{online}/{max_online}", 5],
+            ["&a‣ &rPos: &a{x}, {y}, {z}", 6],
+            ["===============", 7]
+        ]
+    }
 }
