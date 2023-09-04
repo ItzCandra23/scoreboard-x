@@ -1,69 +1,79 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sendMessage = exports.send = void 0;
+exports.send = void 0;
 const name = "ScoreboardX";
 /**Send message to player or console. */
-var send;
-(function (send) {
-    /**Send error message. */
-    function error(message, actor) {
-        if (actor)
-            actor.sendMessage(`§c${message.replace(/&r/g, "§r§a").replace(/&f/g, "§r")}`);
-        else
-            console.log(`[${name}] Error! ${message.replace(/&r/g, "").replace(/&f/g, "")}`.red);
-    }
-    send.error = error;
-    /**Send success message. */
-    function success(message, actor) {
-        if (actor)
-            actor.sendMessage(`§a${message.replace(/&r/g, "§r§a").replace(/&f/g, "§r")}`);
-        else
-            console.log(`[${name}] ${message.replace(/&r/g, "").replace(/&f/g, "")}`.green);
-    }
-    send.success = success;
-    /**Send normal message. */
-    function msg(message, actor) {
-        if (actor)
-            actor.sendMessage(message.replace(/&r/g, "§r").replace(/&f/g, "§r").replace(/&a/g, "§a").replace(/&e/g, "§e"));
-        else
-            console.log(`[${name}] ${message.replace(/&r/g, "").replace(/&f/g, "").replace(/&a/g, "").replace(/&e/g, "")}`);
-    }
-    send.msg = msg;
-})(send = exports.send || (exports.send = {}));
-/**Send message to player or console. */
-class sendMessage {
-    constructor(actor, message = true) {
-        this.plugin = name;
+class send {
+    constructor(actor) {
         this.actor = actor;
-        this.message = message;
     }
     /**Send error message. */
-    error(message) {
-        if (this.message) {
-            if (this.actor)
-                this.actor.sendMessage(`§c${message.replace(/&r/g, "§r§a").replace(/&f/g, "§r")}`);
-            else
-                console.log(`[${this.plugin}] Error! ${message.replace(/&r/g, "").replace(/&f/g, "")}`.red);
-        }
+    static error(message, actor, replace) {
+        if (replace)
+            message = textReplace(message, replace);
+        if (actor)
+            actor.sendMessage(`§c${message}`);
+        else
+            console.log(`[${name}] Error! ${textFilter(message)}`.red);
     }
     /**Send success message. */
-    success(message) {
-        if (this.message) {
-            if (this.actor)
-                this.actor.sendMessage(`§a${message.replace(/&r/g, "§r§a").replace(/&f/g, "§r")}`);
-            else
-                console.log(`[${this.plugin}] ${message.replace(/&r/g, "").replace(/&f/g, "")}`.green);
-        }
+    static success(message, actor, replace) {
+        if (replace)
+            message = textReplace(message, replace);
+        if (actor)
+            actor.sendMessage(`§a${message}`);
+        else
+            console.log(`[${name}] ${textFilter(message)}`.green);
     }
     /**Send normal message. */
-    msg(message) {
-        if (this.message) {
-            if (this.actor)
-                this.actor.sendMessage(message.replace(/&r/g, "§r").replace(/&f/g, "§r").replace(/&a/g, "§a").replace(/&e/g, "§e"));
-            else
-                console.log(`[${this.plugin}] ${message.replace(/&r/g, "").replace(/&f/g, "").replace(/&a/g, "").replace(/&e/g, "")}`);
-        }
+    static msg(message, actor, replace) {
+        if (replace)
+            message = textReplace(message, replace);
+        if (actor)
+            actor.sendMessage(message);
+        else
+            console.log(`[${name}] ${textFilter(message)}`);
+    }
+    /**Send error message. */
+    error(message, replace) {
+        if (this.actor)
+            send.error(message, this.actor, replace);
+        else
+            send.error(message);
+    }
+    /**Send success message. */
+    success(message, replace) {
+        if (this.actor)
+            send.success(message, this.actor, replace);
+        else
+            send.success(message);
+    }
+    /**Send normal message. */
+    msg(message, replace) {
+        if (this.actor)
+            send.msg(message, this.actor, replace);
+        else
+            send.msg(message);
     }
 }
-exports.sendMessage = sendMessage;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWVzc2FnZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm1lc3NhZ2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBRUEsTUFBTSxJQUFJLEdBQUcsYUFBYSxDQUFDO0FBRTNCLHdDQUF3QztBQUN4QyxJQUFpQixJQUFJLENBa0JwQjtBQWxCRCxXQUFpQixJQUFJO0lBQ2pCLHlCQUF5QjtJQUN6QixTQUFnQixLQUFLLENBQUMsT0FBZSxFQUFFLEtBQW9CO1FBQ3ZELElBQUksS0FBSztZQUFFLEtBQUssQ0FBQyxXQUFXLENBQUMsS0FBSyxPQUFPLENBQUMsT0FBTyxDQUFDLEtBQUssRUFBRSxNQUFNLENBQUMsQ0FBQyxPQUFPLENBQUMsS0FBSyxFQUFFLElBQUksQ0FBQyxFQUFFLENBQUMsQ0FBQzs7WUFDcEYsT0FBTyxDQUFDLEdBQUcsQ0FBQyxJQUFJLElBQUksWUFBWSxPQUFPLENBQUMsT0FBTyxDQUFDLEtBQUssRUFBRSxFQUFFLENBQUMsQ0FBQyxPQUFPLENBQUMsS0FBSyxFQUFFLEVBQUUsQ0FBQyxFQUFFLENBQUMsR0FBRyxDQUFDLENBQUM7SUFDOUYsQ0FBQztJQUhlLFVBQUssUUFHcEIsQ0FBQTtJQUVELDJCQUEyQjtJQUMzQixTQUFnQixPQUFPLENBQUMsT0FBZSxFQUFFLEtBQW9CO1FBQ3pELElBQUksS0FBSztZQUFFLEtBQUssQ0FBQyxXQUFXLENBQUMsS0FBSyxPQUFPLENBQUMsT0FBTyxDQUFDLEtBQUssRUFBRSxNQUFNLENBQUMsQ0FBQyxPQUFPLENBQUMsS0FBSyxFQUFFLElBQUksQ0FBQyxFQUFFLENBQUMsQ0FBQzs7WUFDcEYsT0FBTyxDQUFDLEdBQUcsQ0FBQyxJQUFJLElBQUksS0FBSyxPQUFPLENBQUMsT0FBTyxDQUFDLEtBQUssRUFBRSxFQUFFLENBQUMsQ0FBQyxPQUFPLENBQUMsS0FBSyxFQUFFLEVBQUUsQ0FBQyxFQUFFLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDekYsQ0FBQztJQUhlLFlBQU8sVUFHdEIs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
+exports.send = send;
+function isArrayOfTuples(obj) {
+    return Array.isArray(obj) && obj.every(item => Array.isArray(item) && item.length === 2 && typeof item[0] === 'string' && typeof item[1] === 'string');
+}
+function textReplace(text, replace) {
+    if (isArrayOfTuples(replace)) {
+        replace.forEach(([v, w]) => {
+            const reg = new RegExp(v, "g");
+            text = text.replace(reg, w);
+        });
+    }
+    else {
+        const reg = new RegExp(replace[0], "g");
+        text = text.replace(reg, replace[1]);
+    }
+    return text;
+}
+function textFilter(text) {
+    return text.split("§").map((v) => v.slice(1)).join().replace(/,/g, "");
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWVzc2FnZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm1lc3NhZ2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBRUEsTUFBTSxJQUFJLEdBQUcsYUFBYSxDQUFDO0FBRTNCLHdDQUF3QztBQUN4QyxNQUFhLElBQUk7SUFFYixZQUFZLEtBQWM7UUFDdEIsSUFBSSxDQUFDLEtBQUssR0FBQyxLQUFLLENBQUM7SUFDckIsQ0FBQztJQUVELHlCQUF5QjtJQUN6QixNQUFNLENBQUMsS0FBSyxDQUFDLE9BQWUsRUFBRSxLQUFjLEVBQUUsT0FBNkM7UUFDdkYsSUFBSSxPQUFPO1lBQUUsT0FBTyxHQUFDLFdBQVcsQ0FBQyxPQUFPLEVBQUUsT0FBTyxDQUFDLENBQUM7UUFDbkQsSUFBSSxLQUFLO1lBQUUsS0FBSyxDQUFDLFdBQVcsQ0FBQyxLQUFLLE9BQU8sRUFBRSxDQUFDLENBQUM7O1lBQ3hDLE9BQU8sQ0FBQyxHQUFHLENBQUMsSUFBSSxJQUFJLFlBQVksVUFBVSxDQUFDLE9BQU8sQ0FBQyxFQUFFLENBQUMsR0FBRyxDQUFDLENBQUM7SUFDcEUsQ0FBQztJQUVELDJCQUEyQjtJQUMzQixNQUFNLENBQUMsT0FBTyxDQUFDLE9BQWUsRUFBRSxLQUFjLEVBQUUsT0FBNkM7UUFDekYsSUFBSSxPQUFPO1lBQUUsT0FBTyxHQUFDLFdBQVcsQ0FBQyxPQUFPLEVBQUUsT0FBTyxDQUFDLENBQUM7UUFDbkQsSUFBSSxLQUFLO1lBQUUsS0FBSyxDQUFDLFdBQVcsQ0FBQyxLQUFLLE9BQU8sRUFBRSxDQUFDLENBQUM7O1lBQ3hDLE9BQU8sQ0FBQyxHQUFHLENBQUMsSUFBSSxJQUFJLEtBQUssVUFBVSxDQUFDLE9BQU8sQ0FBQyxFQUFFLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDL0QsQ0FBQztJQUVELDBCQUEwQjtJQUMxQixNQUFNLENBQUMsR0FBRyxDQUFDLE9BQWUsRUFBRSxLQUFjLEVBQUUsT0FBNkM7UUFDckYsSUFBSSxPQUFPO1lBQUUsT0FBTyxH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

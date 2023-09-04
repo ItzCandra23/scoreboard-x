@@ -1,8 +1,6 @@
 import { command } from "bdsx/command";
-import { ScoreboardX } from ".";
-import { send, sendMessage } from "./utils/message";
-import { CommandPermissionLevel } from "bdsx/bds/command";
-import { int32_t } from "bdsx/nativetype";
+import { ScoreboardX } from "..";
+import { send } from "./utils/message";
 
 command.register("scorex", "Show or hide your scoreboard.")
 .overload((p, o) => {
