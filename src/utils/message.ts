@@ -69,5 +69,5 @@ function textReplace(text: string, replace: [string, string]|[string, string][])
 }
 
 function textFilter(text: string): string {
-    return text.split("§").map((v) => v.slice(1)).join().replace(/,/g, "");
+    return text.split("§").map((v, i) => { if (i === 0) return v; else return v.slice(1)}).join().replace(/,/g, "");
 }
